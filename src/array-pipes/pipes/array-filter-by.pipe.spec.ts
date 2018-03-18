@@ -1,8 +1,9 @@
-import { ArrayFilterByPipePipe } from './array-filter-by-pipe.pipe';
+import { ArrayFilterPipe } from './array-filter-by.pipe';
 
-describe('ArrayFilterByPipePipe', () => {
+
+describe('ArrayFilterPipe', () => {
   it('create an instance', () => {
-    const pipe = new ArrayFilterByPipePipe();
+    const pipe = new ArrayFilterPipe();
     expect(pipe).toBeTruthy();
   });
 });

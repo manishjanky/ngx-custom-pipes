@@ -10,6 +10,9 @@ export class MathMedianPipe implements PipeTransform {
     if (!Array.isArray(array)) {
       return 0;
     }
+    if (array.length === 0 || isNaN(array[0])) {
+      return 0;
+    }
     let median = 0;
     const len = array.length;
     array.sort((a, b) => a - b);

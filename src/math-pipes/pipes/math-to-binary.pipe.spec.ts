@@ -1,8 +1,8 @@
-import { MathToBinaryPipe } from './math-to-binary.pipe';
+import { MathBinaryPipe } from './math-to-binary.pipe';
 
-describe('MathToBinaryPipe', () => {
+describe('MathBinaryPipe', () => {
   it('create an instance', () => {
-    const pipe = new MathToBinaryPipe();
+    const pipe = new MathBinaryPipe();
     expect(pipe).toBeTruthy();
   });
 });

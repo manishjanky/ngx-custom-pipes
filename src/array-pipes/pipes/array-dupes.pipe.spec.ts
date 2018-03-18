@@ -1,8 +1,8 @@
-import { ArrayDupesPipePipe } from './array-dupes-pipe.pipe';
+import { ArrayDupesPipe } from './array-dupes.pipe';
 
 describe('ArrayDupesPipePipe', () => {
   it('create an instance', () => {
-    const pipe = new ArrayDupesPipePipe();
+    const pipe = new ArrayDupesPipe();
     expect(pipe).toBeTruthy();
   });
 });

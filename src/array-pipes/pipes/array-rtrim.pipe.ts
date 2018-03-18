@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 @Pipe({
   name: "rtrim"
 })
-export class ArrayRightTrimPipe implements PipeTransform {
+export class ArrayRtrimPipe implements PipeTransform {
   public transform(array: any[], items: number) {
     if (!Array.isArray(array)) {
       return array;

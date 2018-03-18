@@ -1,8 +1,8 @@
-import { ArrayDiffPipePipe } from './array-diff-pipe.pipe';
+import { ArrayDiffPipe } from './array-diff.pipe';
 
 describe('ArrayDiffPipePipe', () => {
   it('create an instance', () => {
-    const pipe = new ArrayDiffPipePipe();
+    const pipe = new ArrayDiffPipe();
     expect(pipe).toBeTruthy();
   });
 });

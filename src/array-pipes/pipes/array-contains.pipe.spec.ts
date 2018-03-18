@@ -1,8 +1,9 @@
-import { ArrayContainsPipePipe } from './array-contains-pipe.pipe';
+import { ArrayContainsPipe } from './array-contains.pipe';
 
-describe('ArrayContainsPipePipe', () => {
+
+describe('ArrayContainsPipe', () => {
   it('create an instance', () => {
-    const pipe = new ArrayContainsPipePipe();
+    const pipe = new ArrayContainsPipe();
     expect(pipe).toBeTruthy();
   });
 });
