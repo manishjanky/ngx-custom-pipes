@@ -7,8 +7,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: "shorten"
 })
 export class StringShortenPipe implements PipeTransform {
-  transform(value: String) {
-    let splitWords = value.split(" ");
+  public transform(value: string) {
+    const splitWords = value.split(" ");
     return splitWords[0].charAt(0).toUpperCase() + splitWords[1].charAt(0).toUpperCase();
   }
 }

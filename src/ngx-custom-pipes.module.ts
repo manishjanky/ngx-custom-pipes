@@ -6,4 +6,4 @@ import { NgModule } from "@angular/core";
   exports: [ ],
   providers: [],
   bootstrap: []})
-export class PaginationModule {}
+export class CustomPipesModule {}

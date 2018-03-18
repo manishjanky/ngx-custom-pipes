@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: "ucfirst"
 })
 export class StringUcfirstPipe implements PipeTransform {
-  transform(value: String) {
+  public transform(value: string) {
     return value && value.charAt(0).toUpperCase() + value.slice(1);
   }
 }

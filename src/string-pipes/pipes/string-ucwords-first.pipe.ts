@@ -1,15 +1,15 @@
-import {Pipe, PipeTransform} from "@angular/core";
+import { Pipe, PipeTransform } from "@angular/core";
 
 /**
  * change first letter of each word to uppercase
  */
 @Pipe({
-  name:"ucwordsfirst"
+  name: "ucwordsfirst"
 })
-export class StringUcwordsFirstPipe implements PipeTransform{
-  transform(value: String): String{
+export class StringUcwordsFirstPipe implements PipeTransform {
+  public transform(value: string): string {
     let words = value.split(" ");
-    words = words.map((word)=>{
+    words = words.map((word) => {
       return word.charAt(0).toUpperCase() + word.slice(1);
     });
     return words.join(" ");

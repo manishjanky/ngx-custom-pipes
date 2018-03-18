@@ -1,2 +1,2 @@
 // export { PaginationComponent } from './components';
-// export { PaginationModule } from './ngx-custom-pipes.module';
+export { CustomPipesModule } from './ngx-custom-pipes.module';

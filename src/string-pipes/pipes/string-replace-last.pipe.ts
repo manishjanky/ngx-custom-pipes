@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: "replaceLast"
 })
 export class StringReplaceLastPipe implements PipeTransform {
-  transform(value: String,replaceChar: string, replaceWith?: string) {
+  public transform(value: string, replaceChar: string, replaceWith?: string) {
     const re = new RegExp("[" + replaceChar + "]$", "g");
-    return value.replace(re, replaceWith ? replaceWith: "");
+    return value.replace(re, replaceWith ? replaceWith : "");
   }
 }

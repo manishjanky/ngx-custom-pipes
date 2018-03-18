@@ -21,13 +21,13 @@ export class MathModePipe implements PipeTransform {
             }
         }
 
-        for (const i in count)
+        for (const i in count) {
             if (count.hasOwnProperty(i)) {
                 if (count[i] === maxIndex) {
                     modes.push(Number(i));
                 }
             }
-
+        }
         return modes;
     }
 }

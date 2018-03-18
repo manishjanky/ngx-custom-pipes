@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 /**
- *calculates the square root of a given number
+ * calculates the square root of a given number
  */
 
 @Pipe({
