@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * changes first letter of string to uppercase
+ * repeats the string n number of times
  */
 @Pipe({
-  name: "replaceFirst"
+  name: "repeat"
 })
 export class StringRepeatPipe implements PipeTransform {
   public transform(value: string, count: number = 1) {

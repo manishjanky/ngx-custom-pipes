@@ -18,6 +18,6 @@ describe('MathMedianPipe', () => {
 
   it('should return median value for array passed', () => {
     const pipe = new MathMedianPipe();
-    expect(pipe.transform([1,2,4,5,7])).toEqual(4);
+    expect(pipe.transform([1, 2, 4, 5, 7])).toEqual(4);
   });
 });

@@ -15,9 +15,4 @@ describe('MathFloorPipe', () => {
     const pipe = new MathFloorPipe();
     expect(pipe.transform(3.999)).toEqual(3);
   });
-
-  it('should return floor value', () => {
-    const pipe = new MathFloorPipe();
-    expect(pipe.transform(null)).toEqual(0);
-  });
 });

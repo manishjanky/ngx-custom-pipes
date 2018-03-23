@@ -10,7 +10,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 export class StringAbbrevCurrencyPipe implements PipeTransform {
   public transform(value: any, toFixed: number = 2, fullName: boolean = false) {
     // Alter numbers larger than 1k
-    if (value.indexOf(",") > -1) {
+    if (value.toString().indexOf(",") > -1) {
       value = Number(value.split(",").join(""));
     }
     if (value >= 1e3) {

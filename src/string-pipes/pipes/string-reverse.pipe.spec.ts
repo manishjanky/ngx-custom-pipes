@@ -5,4 +5,9 @@ describe('StringReversePipe', () => {
     const pipe = new StringReversePipe();
     expect(pipe).toBeTruthy();
   });
+
+  it('should reverse the string', () => {
+    const pipe = new StringReversePipe();
+    expect(pipe.transform('asdfghjkl')).toEqual('lkjhgfdsa');
+  });
 });

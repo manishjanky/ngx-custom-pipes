@@ -5,4 +5,9 @@ describe('StringReplacePipe', () => {
     const pipe = new StringReplacePipe();
     expect(pipe).toBeTruthy();
   });
+
+  it('should replace all occurances', () => {
+    const pipe = new StringReplacePipe();
+    expect(pipe.transform('eerrttyyttuu', 't')).toEqual('eerryyuu');
+  });
 });

@@ -1,13 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * changes first letter of string to uppercase
+ * replaces last occurance of a character
  */
 @Pipe({
   name: "replaceLast"
 })
 export class StringReplaceLastPipe implements PipeTransform {
   public transform(value: string, replaceChar: string, replaceWith?: string) {
-    const re = new RegExp("[" + replaceChar + "]$", "g");
-    return value.replace(re, replaceWith ? replaceWith : "");
+    const re = new RegExp("[" + replaceChar + "]$");
+    replaceWith = replaceWith ? replaceWith : "";
+    return value.replace(re, replaceWith);
   }
 }

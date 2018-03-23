@@ -5,4 +5,9 @@ describe('StringPadEndPipe', () => {
     const pipe = new StringPadEndPipe();
     expect(pipe).toBeTruthy();
   });
+
+  // it('should pad the string at end with specified chars', () => {
+  //   const pipe = new StringPadEndPipe();
+  //   expect(pipe.transform("kjwgjgewfjegwychgdg",3)).toEqual("   kjwgjgewfjegwychgdg");
+  // });
 });
