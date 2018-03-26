@@ -4,18 +4,22 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "sortBy"
 })
 export class ArraySortByPipe implements PipeTransform {
-  public transform(array: any, prop?: string, reverse: boolean = false) {
+  public transform(array: any[], reverse: boolean = false, prop?: string) {
     if (!Array.isArray(array)) {
       return array;
     }
     if (array.length) {
+      let sortedArray: any[];
       if (typeof array[0] === "string") {
-        return array.sort();
+        sortedArray = array.sort();
       }
       if (typeof array[0] === "number") {
-        return array.sort((a, b) => a - b);
+        sortedArray = array.sort((a, b) => a - b);
       }
-      const sortedArray = array.sort((a, b) => a[prop].toString().localeCompare(b[prop].toString()));
+      if (typeof array[0] === "object") {
+        sortedArray = array.sort((a, b) => a[prop].toString().localeCompare(b[prop].toString()));
+      }
+
       return !reverse ? sortedArray : sortedArray.reverse();
     }
     return array;

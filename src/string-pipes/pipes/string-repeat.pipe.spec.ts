@@ -9,4 +9,9 @@ describe('StringRepeatPipe', () => {
     const pipe = new StringRepeatPipe();
     expect(pipe.transform("repeat", 2)).toEqual("repeatrepeat");
   });
+
+  it('should repeat the string n number of time', () => {
+    const pipe = new StringRepeatPipe();
+    expect(pipe.transform("repeat")).toEqual("repeat");
+  });
 });

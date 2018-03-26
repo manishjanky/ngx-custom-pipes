@@ -6,11 +6,8 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "mean"
 })
 export class MathMeanPipe implements PipeTransform {
-  public transform(array: number[]) {
-    if (!Array.isArray(array)) {
-      return array;
-    }
-    if (!array.length || isNaN(array[0])) {
+  public transform(array: any) {
+    if (!Array.isArray(array) || !array.length || isNaN(array[0])) {
       return 0;
     }
     const sum = array.reduce((a, b) => {

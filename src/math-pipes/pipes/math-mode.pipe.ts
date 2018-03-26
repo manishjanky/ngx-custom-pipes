@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
     name: "mode"
 })
 export class MathModePipe implements PipeTransform {
-    public transform(array: number[]) {
+    public transform(array: any) {
         if (!Array.isArray(array) || isNaN(array[0])) {
             return array;
         }

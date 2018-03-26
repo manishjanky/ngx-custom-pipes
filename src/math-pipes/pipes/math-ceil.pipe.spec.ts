@@ -10,4 +10,9 @@ describe('MathCeilingPipe', () => {
     const pipe = new MathCeilingPipe();
     expect(pipe.transform(10.23)).toEqual(11);
   });
+
+  it('should return ceiling value', () => {
+    const pipe = new MathCeilingPipe();
+    expect(pipe.transform("Defgh" as any)).toEqual('Defgh' as any);
+  });
 });

@@ -6,13 +6,11 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "median"
 })
 export class MathMedianPipe implements PipeTransform {
-  public transform(array: any[]) {
-    if (!Array.isArray(array)) {
+  public transform(array: any) {
+    if (!Array.isArray(array) || array.length === 0 || isNaN(array[0])) {
       return 0;
     }
-    if (array.length === 0 || isNaN(array[0])) {
-      return 0;
-    }
+
     let median = 0;
     const len = array.length;
     array.sort((a, b) => a - b);

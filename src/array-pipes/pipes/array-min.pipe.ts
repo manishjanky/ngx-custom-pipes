@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "min"
 })
 export class ArrayMinPipe implements PipeTransform {
-  public transform(array: any) {
+  public transform(array: number[]) {
     if (!Array.isArray(array) || isNaN(array[0])) {
       return 0;
     }

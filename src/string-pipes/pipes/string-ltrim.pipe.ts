@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: "ltrim"
 })
 export class StringLtrimPipe implements PipeTransform {
-  public transform(value: string, chars: string) {
-    if (chars.length === 0) {
+  public transform(value: string, chars?: string) {
+    if (!chars || chars.length === 0) {
       return value.trim();
     }
     const re = new RegExp("^[" + chars + "]+", "g");

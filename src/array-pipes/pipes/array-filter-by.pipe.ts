@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "filterBy"
 })
 export class ArrayFilterPipe implements PipeTransform {
-  public transform(array: any, searchText: string, keyName: string) {
+  public transform(array: any[], searchText: string, keyName: string) {
     if (!array || !searchText || !Array.isArray(array)) {
       return array;
     }

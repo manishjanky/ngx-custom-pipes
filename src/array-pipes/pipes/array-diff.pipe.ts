@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "diff"
 })
 export class ArrayDiffPipe implements PipeTransform {
-  public transform(array: any, seconndArray: any = []): any[] {
+  public transform(array: any[], seconndArray: any = []): any[] {
     if (!Array.isArray(array)) {
       return [];
     }

@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "sum"
 })
 export class ArraySumPipe implements PipeTransform {
-  public transform(array: any): number {
+  public transform(array: number[]): number {
     if (!Array.isArray(array) || isNaN(array[0])) {
       return 0;
     }

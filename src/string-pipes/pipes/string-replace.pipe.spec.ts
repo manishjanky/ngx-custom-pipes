@@ -8,6 +8,11 @@ describe('StringReplacePipe', () => {
 
   it('should replace all occurances', () => {
     const pipe = new StringReplacePipe();
+    expect(pipe.transform('eerrttyyttuu', 't','x')).toEqual('eerrxxyyxxuu');
+  });
+
+  it('should replace last occurance of char', () => {
+    const pipe = new StringReplacePipe();
     expect(pipe.transform('eerrttyyttuu', 't')).toEqual('eerryyuu');
   });
 });

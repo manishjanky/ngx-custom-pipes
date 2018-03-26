@@ -13,6 +13,6 @@ describe('ArrayUniquePipe', () => {
 
   it('should return the value when array not passes', () => {
     const pipe = new ArrayUniquePipe();
-    expect(pipe.transform({q:'sd',w:'sdsd'})).toEqual({q:'sd',w:'sdsd'});
+    expect(pipe.transform({ q: 'sd', w: 'sdsd' } as any)).toEqual({ q: 'sd', w: 'sdsd' } as any);
   });
 });

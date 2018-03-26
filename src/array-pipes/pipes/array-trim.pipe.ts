@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "trim"
 })
 export class ArrayTrimPipe implements PipeTransform {
-  public transform(array: any, items: number) {
+  public transform(array: any[], items: number) {
     if (!Array.isArray(array)) {
       return array;
     }

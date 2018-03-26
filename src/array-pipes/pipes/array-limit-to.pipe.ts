@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "limitTo"
 })
 export class ArrayLimitToPipe implements PipeTransform {
-  public transform(array: any, itemsCount: number, startIndex: number = 0) {
+  public transform(array: any[], itemsCount: number, startIndex: number = 0) {
     if (!Array.isArray(array)) {
       return array;
     }

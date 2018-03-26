@@ -6,11 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: "padEnd"
 })
 export class StringPadEndPipe implements PipeTransform {
-  public transform(value: string, count: number, chars?: string) {
+  public transform(value: any, count: number, chars?: string) {
     if (!count) {
       count = chars.length;
     }
-    // return value.padEnd(value.length + count, chars?chars:" ");
-    return null;
+    return value.padEnd(value.length + count, chars?chars:" ");
   }
 }

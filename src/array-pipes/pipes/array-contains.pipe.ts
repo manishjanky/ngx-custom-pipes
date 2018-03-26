@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "contains"
 })
 export class ArrayContainsPipe implements PipeTransform {
-  public transform(array: any, item: any) {
+  public transform(array: any[], item: any) {
     if (!Array.isArray(array)) {
       return false;
     }

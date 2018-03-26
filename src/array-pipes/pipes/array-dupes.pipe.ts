@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "dupes"
 })
 export class ArrayDupesPipe implements PipeTransform {
-  public transform(array: any, key?: string): any[] {
+  public transform(array: any[], key?: string): any[] {
     if (!Array.isArray(array)) {
       return array;
     }

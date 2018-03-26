@@ -10,4 +10,9 @@ describe('StringReplaceFirstPipe', () => {
     const pipe = new StringReplaceFirstPipe();
     expect(pipe.transform('reppeat', 'p', 'x')).toEqual('rexpeat');
   });
+
+  it('should replace the first occurance of character', () => {
+    const pipe = new StringReplaceFirstPipe();
+    expect(pipe.transform('reppeat', 'p')).toEqual('repeat');
+  });
 });

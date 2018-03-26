@@ -17,6 +17,6 @@ describe('MathMeanPipe', () => {
 
   it('should return mean value for array passed', () => {
     const pipe = new MathMeanPipe();
-    expect(pipe.transform([null])).toEqual(0);
+    expect(pipe.transform("")).toEqual(0);
   });
 });
