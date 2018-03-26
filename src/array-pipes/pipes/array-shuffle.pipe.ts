@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "shuffle"
 })
 export class ArrayShufflePipe implements PipeTransform {
-  public transform(array: any[]) {
+  public transform(array: any) {
     if (!Array.isArray(array)) {
       return array;
     }

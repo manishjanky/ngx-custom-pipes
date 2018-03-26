@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * changes first letter of string to uppercase
+ * changes the string to camelCase string
  */
 @Pipe({
   name: "camelCase"

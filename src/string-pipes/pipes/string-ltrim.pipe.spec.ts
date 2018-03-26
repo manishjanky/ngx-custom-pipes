@@ -8,6 +8,6 @@ describe('StringLtrimPipe', () => {
 
   it('should return left trimmed string', () => {
     const pipe = new StringLtrimPipe();
-    expect(pipe.transform("jhfshjfsd", "j")).toBeTruthy("hfshjfsd");
+    expect(pipe.transform("jhfshjfsd", "j")).toEqual("hfshjfsd");
   });
 });

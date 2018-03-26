@@ -5,4 +5,9 @@ describe('ArrayTrimPipe', () => {
     const pipe = new ArrayTrimPipe();
     expect(pipe).toBeTruthy();
   });
+
+  it('should remove elements from array with specified number', () => {
+    const pipe = new ArrayTrimPipe();
+    expect(pipe.transform([1, 2, 3, 4, 5, 6, 7, 8, 9], 2)).toEqual([3, 4, 5, 6, 7]);
+  });
 });

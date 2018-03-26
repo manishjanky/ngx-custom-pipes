@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "range"
 })
 export class ArrayRangePipe implements PipeTransform {
-  public transform(array: any[], startIndex: number = 0, endIndex: number = array.length) {
+  public transform(array: any, startIndex: number = 0, endIndex: number = array.length) {
     if (!Array.isArray(array)) {
       return array;
     }
