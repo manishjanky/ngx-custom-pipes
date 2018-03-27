@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * changes first letter of string to uppercase
+ * trims the characters from left if match found
  */
 @Pipe({
   name: "ltrim"

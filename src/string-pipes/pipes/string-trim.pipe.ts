@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * trims the trims of specified characters from start and end
+ * trims off specified characters from start and end
  */
 @Pipe({
   name: "trim"

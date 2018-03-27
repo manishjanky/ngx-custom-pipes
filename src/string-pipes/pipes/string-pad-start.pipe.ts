@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * changes first letter of string to uppercase
+ * pads the string at start where target length of string will be string length + count 
  */
 @Pipe({
   name: 'padStart'

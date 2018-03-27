@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * changes first letter of string to uppercase
+ * pads the string at end where target length of string will be string length + count 
  */
 @Pipe({
   name: 'padEnd'
 })
 export class StringPadEndPipe implements PipeTransform {
-  public transform(value: any, count: number, chars?: string) {
+  public transform(value: any, count: number = 0, chars?: string) {
     if (!count) {
       count = chars.length;
     }

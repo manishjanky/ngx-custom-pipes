@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * changes first letter of string to uppercase
+ * replaces all occurrances of particular character with specified characters
  */
 @Pipe({
   name: "replace"
