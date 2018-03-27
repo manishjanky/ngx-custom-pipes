@@ -1,4 +1,4 @@
-import { StringProfileName } from './string-shorten.pipe';
+import { StringProfileName } from './string-profile-name.pipe';
 
 describe('StringProfileName', () => {
   it('create an instance', () => {
