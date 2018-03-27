@@ -8,16 +8,16 @@ describe('StringPadStartPipe', () => {
 
   it('should pad the string at end with specified chars', () => {
     const pipe = new StringPadStartPipe();
-    expect(pipe.transform("kjwgjgewfjegwychgdg", 3)).toEqual("   kjwgjgewfjegwychgdg");
+    expect(pipe.transform('kjwgjgewfjegwychgdg', 3)).toEqual('   kjwgjgewfjegwychgdg');
   });
 
   it('should pad the string at end with specified chars', () => {
     const pipe = new StringPadStartPipe();
-    expect(pipe.transform("kjwgjgewfjegwychgdg", null,'abc')).toEqual("abckjwgjgewfjegwychgdg");
+    expect(pipe.transform('kjwgjgewfjegwychgdg', null, 'abc')).toEqual('abckjwgjgewfjegwychgdg');
   });
 
   it('should pad the string at end with specified chars', () => {
     const pipe = new StringPadStartPipe();
-    expect(pipe.transform("kjwgjgewfjegwychgdg", 1,'abc')).toEqual("akjwgjgewfjegwychgdg");
+    expect(pipe.transform('kjwgjgewfjegwychgdg', 1, 'abc')).toEqual('akjwgjgewfjegwychgdg');
   });
 });

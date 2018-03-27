@@ -13,6 +13,6 @@ describe('MathFloorPipe', () => {
 
   it('should return floor value', () => {
     const pipe = new MathFloorPipe();
-    expect(pipe.transform('test' as any)).toEqual('test' as any);;
+    expect(pipe.transform('test' as any)).toEqual('test' as any);
   });
 });

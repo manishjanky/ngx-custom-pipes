@@ -12,7 +12,7 @@ export class StringAbbrevCurrencyPipe implements PipeTransform {
     // Alter numbers larger than 1k
     if (value.toString().indexOf(",") > -1) {
       value = Number(value.split(",").join(""));
-    }else{
+    } else {
       value = Number(value);
     }
     if (value >= 1e3) {

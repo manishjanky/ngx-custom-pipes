@@ -1,7 +1,7 @@
 import { testData } from './../test';
 import { ArraySortByPipe } from './array-sort-by.pipe';
 
-let sortedTestDatabyFirstName = testData.sort((a, b) => a.firstName.toString().localeCompare(b.firstName));
+const sortedTestDatabyFirstName = testData.sort((a, b) => a.firstName.toString().localeCompare(b.firstName));
 describe('ArraySortByPipe', () => {
   it('create an instance', () => {
     const pipe = new ArraySortByPipe();

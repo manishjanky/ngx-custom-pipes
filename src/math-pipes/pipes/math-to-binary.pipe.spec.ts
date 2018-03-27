@@ -18,6 +18,6 @@ describe('MathBinaryPipe', () => {
 
   it('return octal for a number', () => {
     const pipe = new MathBinaryPipe();
-    expect(pipe.transform(1234,8)).toEqual('2322');
+    expect(pipe.transform(1234, 8)).toEqual('2322');
   });
 });

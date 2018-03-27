@@ -8,7 +8,7 @@ describe('MathMedianPipe', () => {
 
   it('should return median value 0 for null passed', () => {
     const pipe = new MathMedianPipe();
-    expect(pipe.transform('test' as any)).toEqual(0);;
+    expect(pipe.transform('test' as any)).toEqual(0);
   });
 
   it('should return median value for empty array passed', () => {

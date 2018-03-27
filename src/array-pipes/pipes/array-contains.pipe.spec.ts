@@ -13,7 +13,7 @@ describe('ArrayContainsPipe', () => {
 
   it('should return if items is present in array or not with notArray value', () => {
     const pipe = new ArrayContainsPipe();
-    expect(pipe.transform({w:'ssss'} as any, 4)).toEqual(false);
+    expect(pipe.transform({ w: 'ssss' } as any, 4)).toEqual(false);
   });
 
 });

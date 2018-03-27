@@ -7,7 +7,7 @@ import { Pipe, PipeTransform } from "@angular/core";
 })
 export class ArrayOmitPipe implements PipeTransform {
   public transform(array: any[], omitParams: any = []) {
-    let inputArray = JSON.parse(JSON.stringify(array));
+    const inputArray = JSON.parse(JSON.stringify(array));
     if (!Array.isArray(array) || !Array.isArray(omitParams)) {
       return array;
     }
