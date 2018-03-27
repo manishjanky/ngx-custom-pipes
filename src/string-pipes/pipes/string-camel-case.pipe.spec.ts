@@ -8,6 +8,6 @@ describe('StringCamelCasePipe', () => {
 
   it('should convert string to camel case', () => {
     const pipe = new StringCamelCasePipe();
-    expect(pipe.transform("hello werrrt")).toEqual("Hello Werrrt");
+    expect(pipe.transform("hello werrrt")).toEqual("HelloWerrrt");
   });
 });

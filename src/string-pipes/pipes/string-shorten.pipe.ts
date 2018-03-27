@@ -4,9 +4,9 @@ import { Pipe, PipeTransform } from '@angular/core';
  * John Doe === JD
  */
 @Pipe({
-  name: "shorten"
+  name: "profileName"
 })
-export class StringShortenPipe implements PipeTransform {
+export class StringProfileName implements PipeTransform {
   public transform(value: string) {
     const splitWords = value.split(" ");
     return splitWords[0].charAt(0).toUpperCase() + splitWords[1].charAt(0).toUpperCase();

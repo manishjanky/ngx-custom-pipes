@@ -1,13 +1,13 @@
-import { StringShortenPipe } from './string-shorten.pipe';
+import { StringProfileName } from './string-shorten.pipe';
 
-describe('StringShortenPipe', () => {
+describe('StringProfileName', () => {
   it('create an instance', () => {
-    const pipe = new StringShortenPipe();
+    const pipe = new StringProfileName();
     expect(pipe).toBeTruthy();
   });
 
   it('should return the shortened profile name', () => {
-    const pipe = new StringShortenPipe();
+    const pipe = new StringProfileName();
     expect(pipe.transform('Manish Kumar')).toEqual('MK');
   });
 });

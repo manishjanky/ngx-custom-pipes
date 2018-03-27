@@ -15,4 +15,9 @@ describe('StringReplaceLastPipe', () => {
     const pipe = new StringReplaceLastPipe();
     expect(pipe.transform('reppeat', 'p', 'x')).toEqual('repxeat');
   });
+
+  it('should replace the first occurance of character', () => {
+    const pipe = new StringReplaceLastPipe();
+    expect(pipe.transform('hello world', 'h', 'x')).toEqual('xello world');
+  });
 });
