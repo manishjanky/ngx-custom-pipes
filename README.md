@@ -11,87 +11,118 @@
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/manishjanky/ngx-custom-pipes.svg)]()
 [![GitHub contributors](https://img.shields.io/github/contributors/manishjanky/ngx-custom-pipes.svg)]()
 
-`ngx-custom-pipes` is Bootstrap(4) based pagination module for Angular(2+) applications.
+`ngx-custom-pipes` custom pipes module for angular 4 and above applications.
 
 ## Examples
 
-* [demo-page](https://manishjanky.github.io/ngx-custom-pipes-demo/)
+* [demo-page](https://manishjanky.github.io/ngx-custom-pipes/)
 
 ## Installation
 
 * `npm install ngx-custom-pipes`
-* `npm install bootstrap@4.0.0-alpha.6 --save-dev`
-* include bootstrap scripts and styles in you `angular-cli.json` to be build of your build process.
-* or include bootstrap css in your index.html 
-
-`````
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-`````
-* Right now `bootstrap@4.0.0-alpha.6` is supported will add support for other versions soon.
 
 ### For webpack and tsc builds/ angular-cli builds
 
-* import `PaginationModule` from `ngx-custom-pipes`:
+* import `CustomPipesModule` from `ngx-custom-pipes`:
 
 ```
-import { PaginationModule } from 'ngx-custom-pipes'
+import { CustomPipesModule } from 'ngx-custom-pipes'
 ```
 
-* add `PaginationModule` to the imports of your NgModule:
+* If you dont want all the pipe and want pipes for `String` or `Math` or `Array` only then import only the required module.
+
+```
+import { MathPipesModule } from 'ngx-custom-pipes';
+// or
+import { ArrayPipesModule } from 'ngx-custom-pipes'
+// or
+import { StringPipesModule } from 'ngx-custom-pipes'
+```
+
+* add `CustomPipesModule` or `MathPipesModule` or `ArrayPipesModule` or `StringPipesModule` to the imports of your NgModule: as per your requirements
 
 ```
 @NgModule({
   imports: [
     ...,
 
-    PaginationModule
+    CustomPipesModule, MathPipesModule, ArrayPipesModule, StringPipesModule
   ],
   ...
 })
 class YourModule { ... }
 ```
 
-* use `<ng-pagination></ng-pagination>` in your templates to add pagination in your view like below
-
-```
-<ng-pagination [position]="'left'" [pageSize]="10" [itemsCount]="data.length" [data]="data" (getPageData)="getPageData($event)"></ng-pagination>
-```
-
-* do not forget to include bootstrap css in your build process, module or index.html!
-
-## Config
-
-### Input
-
-* `pageSize: number` - Size of a page i.e number of items to be displayed in one page.
-* `itemsCount: number` - total no of itmes that needs ro be paged/total no of records.
-* `position: string` - position of the pagination respect to parent contrainer of your pagination component.
-* `data: Array` - Optional | the data needs to be paged default is null. If pagination is handled by api no need of data.
-
-### Output
-
-* `getPageData: EventEmitter` - emmited when user navigates to a page. Caputure this and update you view data. The events contains the following info
-
-```
-{
-    event: event: Event,
-    pageNo: pageNo: number,
-    pageSize:pageSize: number,
-    data: null| Array,
-}
-```
-- **event**: the triggered event
-- **pageNo**: current page number
-- **pageSize**: current page size. No of items per page
-- **data**: data is the array of records that belongs to this page. Will be `null` if data was not passed and you can fetch data from your api or the way you want it to handle
-
-## Changelog
-* v1.4.1
+## Usage
+### String Pipes
+* `cuurencyAbbrev` : Currency short name/ abbreviation
 ````
- Added support for Observable Data Source.
- Current items range display bug when itemcount 0 bug fix .
+<span>{{10000 | cuurencyAbbrev}}</span> 
+<span>{{'1,000,000,000' | cuurencyAbbrev}}</span>
 ````
+````
+10.00K
+1.00B
+````
+* `camelCase`: Converts the string to camel case with seperators ``(-,_, )``
+`````
+<span>{{'hello world' | camelCase}}</span>
+<span>{{'hello_world' | camelCase}}</span>
+<span>{{'hello-world' | camelCase}}</span>
+`````
+````
+HelloWorld
+HelloWorld
+HelloWorld
+````
+* `ltrim` : trims the characters from left if match found.
+* `padEnd` : pads the string at end where target length of string will be string length + `count`. Default character for padding is space.
+* `padStart` : pads the string at start where target length of string will be string length + `count`. Default character for padding is space.
+* `repeat` : repeats the string n number of times.
+* `replaceFirst`: replaces the first occurance of particular character with specified characters.
+* `replaceLast` : replaces last occurance of of particular character with specified characters.
+* `replace` : replaces all occurrances of particular character with specified characters.
+* `reverse` : reverses the string
+* `rtrim` : trims off the chars from right side if match found.
+* `shorten` : returns the short profile user name for a string.
+* `trim` : trims off specified characters from start and end.
+* `ucfirst` : changes first letter of string to uppercase.
+* `ucwords` : change first letter of each word to uppercase
 
+### Math Pipes
+* `ceil` : returns the ceiling value of a floating point number.
+* `degrees` : converts radians to degrees.
+* `floor` : returns the floor value of a floating point number.
+* `fromBinary` : returns the decimal,octal,hexadecimmal etc representation of a binary number.
+* `mean` : returns the mean of an array of numbers.
+* `median` : returns the median of an array of numbers.
+* `mode` : returns the mode of an array of numbers.
+* `prcnt` : returns the percentage of value of a number.
+* `pow` : returns a number raised to power.
+* `radians` : converts degrees to radians.
+* `roundoff` : rounds off the number to specified decimal places.
+* `sqrt` : returns the square root of a number.
+* `toBinary` : returns binary or octal or hexadecimal representation of a decimal number.
+
+### Array Pipes
+* `contains` : returns `true/false` if the item is present in the array or not.
+* `diff` : returns difference between two arrays i.e the items unique to both arrays.
+* `dupes` : returns the items which occur more than once in array i.e duplicates.
+* `filterBy` : filters an array based on searctext.
+* `limitTo` : limit the records to specified number of items from particular index.
+* `ltrim` : trims an array from left for specified count of numbers.
+* `max` : returns the max value in a array of numbers.
+* `merge` : merges/concats two or more arrays.
+* `min` : returns the minimum value in a array of numbers.
+* `omit` : returns an array after omiting the specified items.
+* `range` : returns an array containing the items in specified range.
+* `reverse` : reverses an array.
+* `rtrim` : trims an array from right with specified count of numbers.
+* `shuffle` : returns an array with items shuffled.
+* `sortBy` : returns a sorted array
+* `sum` : returns sum of an array of numbers.
+* `trim` : trims an array from both ends with specified count of numbers.
+* `unique` : returns array with unique entries eleiminating duplicates. 
 ## Help Improve
 
 Found a bug or an issue with this? [Open a new issue](https://github.com/manishjanky/ngx-custom-pipes/issues) here on GitHub.
