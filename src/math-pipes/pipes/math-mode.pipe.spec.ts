@@ -13,6 +13,6 @@ describe('MathModePipe', () => {
 
   it('should calculate the mode of an array', () => {
     const pipe = new MathModePipe();
-    expect(pipe.transform("")).toEqual("");
+    expect(pipe.transform("test" as any)).toEqual("test" as any);
   });
 });

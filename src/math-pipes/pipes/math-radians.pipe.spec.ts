@@ -10,4 +10,9 @@ describe('MathRadiansPipe', () => {
     const pipe = new MathRadiansPipe();
     expect(pipe.transform(90)).toEqual(90 * Math.PI / 180);
   });
+
+  it('should return radians for the value', () => {
+    const pipe = new MathRadiansPipe();
+    expect(pipe.transform('test' as any)).toEqual('test' as any);
+  });
 });

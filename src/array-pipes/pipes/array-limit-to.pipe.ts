@@ -8,6 +8,6 @@ export class ArrayLimitToPipe implements PipeTransform {
     if (!Array.isArray(array)) {
       return array;
     }
-    return array.splice(startIndex, itemsCount);
+    return array.slice(startIndex, startIndex + itemsCount);
   }
 }

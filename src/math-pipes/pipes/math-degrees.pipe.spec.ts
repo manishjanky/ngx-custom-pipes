@@ -10,4 +10,9 @@ describe('MathDegreesPipe', () => {
     const pipe = new MathDegreesPipe();
     expect(pipe.transform(167)).toEqual(167 * 180 / Math.PI);
   });
+
+  it('should return degrees value as degrees', () => {
+    const pipe = new MathDegreesPipe();
+    expect(pipe.transform('test' as any)).toEqual('test' as any);
+  });
 });

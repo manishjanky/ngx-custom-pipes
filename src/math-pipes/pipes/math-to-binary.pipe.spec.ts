@@ -11,8 +11,13 @@ describe('MathBinaryPipe', () => {
     expect(pipe.transform(12)).toEqual('1100');
   });
 
-  // it('return binary for null', () => {
-  //   const pipe = new MathBinaryPipe();
-  //   expect(pipe.transform("null")).toEqual('');
-  // });
+  it('return binary for string', () => {
+    const pipe = new MathBinaryPipe();
+    expect(pipe.transform("test" as any)).toEqual('test' as any);
+  });
+
+  it('return octal for a number', () => {
+    const pipe = new MathBinaryPipe();
+    expect(pipe.transform(1234,8)).toEqual('2322');
+  });
 });

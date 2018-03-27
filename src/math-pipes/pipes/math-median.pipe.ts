@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "median"
 })
 export class MathMedianPipe implements PipeTransform {
-  public transform(array: any) {
+  public transform(array: number[]): number {
     if (!Array.isArray(array) || array.length === 0 || isNaN(array[0])) {
       return 0;
     }

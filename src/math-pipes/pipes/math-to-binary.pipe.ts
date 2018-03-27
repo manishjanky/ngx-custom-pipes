@@ -7,6 +7,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({ name: 'toBinary' })
 export class MathBinaryPipe implements PipeTransform {
   public transform(value: number, base: number = 2): string {
-    return isNaN(value) ? "" : value.toString(base);
+    return isNaN(value) ? value as any : value.toString(base);
   }
 }

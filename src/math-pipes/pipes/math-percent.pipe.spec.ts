@@ -15,4 +15,9 @@ describe('MathPercentagePipe', () => {
     const pipe = new MathPercentagePipe();
     expect(pipe.transform(23)).toEqual("23%");
   });
+
+  it('should convert the value to percent', () => {
+    const pipe = new MathPercentagePipe();
+    expect(pipe.transform('test' as any)).toEqual("test");
+  });
 });

@@ -25,12 +25,9 @@ export class ArrayUniquePipe implements PipeTransform {
   private findObjectInArray(array: any[], object: any) {
     let found = false;
     for (const item of array) {
-      for (const key in object) {
-        if (object[key] !== item[key]) {
-          continue;
-        }
+      if (JSON.stringify(item) === JSON.stringify(object)) {
+        found = true;
       }
-      found = true;
     }
     return found;
   }

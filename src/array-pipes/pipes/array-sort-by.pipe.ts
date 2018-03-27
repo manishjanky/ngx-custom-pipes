@@ -16,10 +16,9 @@ export class ArraySortByPipe implements PipeTransform {
       if (typeof array[0] === "number") {
         sortedArray = array.sort((a, b) => a - b);
       }
-      if (typeof array[0] === "object") {
+      if (typeof array[0] === "object" && prop) {
         sortedArray = array.sort((a, b) => a[prop].toString().localeCompare(b[prop].toString()));
       }
-
       return !reverse ? sortedArray : sortedArray.reverse();
     }
     return array;
