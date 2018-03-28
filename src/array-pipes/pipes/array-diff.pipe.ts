@@ -6,11 +6,11 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "diff"
 })
 export class ArrayDiffPipe implements PipeTransform {
-  public transform(array: any[], seconndArray: any = []): any[] {
+  public transform(array: any[], seconndArray: any = []) {
     if (!Array.isArray(array)) {
       return array;
     }
     return array.filter((item) => !seconndArray.includes(item))
-      .concat(seconndArray.filter((item) => !array.includes(item)));
+      .concat(seconndArray.filter((item: any) => !array.includes(item)));
   }
 }
