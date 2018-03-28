@@ -15,7 +15,7 @@ describe('MathMeanPipe', () => {
     expect(pipe.transform([])).toEqual(0);
   });
 
-  it('should return mean value for array passed', () => {
+  it('should return mean value for inavlid value passed', () => {
     const pipe = new MathMeanPipe();
     expect(pipe.transform('test' as any)).toEqual(0);
   });
