@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 /**
- * pads the string at start where target length of string will be string length + count 
+ * pads the string at start where target length of string will be string length + count
  */
 @Pipe({
   name: 'padStart'
