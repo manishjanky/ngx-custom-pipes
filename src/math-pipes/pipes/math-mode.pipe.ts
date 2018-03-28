@@ -10,9 +10,9 @@ export class MathModePipe implements PipeTransform {
         if (!Array.isArray(array) || isNaN(array[0])) {
             return array;
         }
-        const modes = [];
-        const count = [];
-        let maxIndex = 0;
+        const modes: any = [];
+        const count: any = [];
+        let maxIndex: number = 0;
 
         for (const num of array) {
             count[num] = (count[num] || 0) + 1;
