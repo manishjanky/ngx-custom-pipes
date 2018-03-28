@@ -6,11 +6,11 @@ import { Pipe, PipeTransform } from "@angular/core";
   name: "ltrim"
 })
 export class ArrayLtrimPipe implements PipeTransform {
-  public transform(array: any[], items: number = 0) {
+  public transform(array: any[], itemsCount: number = 0) {
     if (!Array.isArray(array)) {
       return array;
     }
-    array.splice(0, items);
+    array.splice(0, itemsCount);
     return array;
   }
 }
