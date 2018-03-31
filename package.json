@@ -1,7 +1,7 @@
 {
   "name": "ngx-custom-pipes",
   "version": "0.0.0",
-  "description": "Angular custom pipes for array, string and math.",
+  "description": "custom pipes module for angular 4 and above applications",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
